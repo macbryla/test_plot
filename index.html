@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>SANKEY Experiment</title>
+<style>
+	body {
+		font-size: large;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+
+	.node rect {
+		fill-opacity: .9;
+		shape-rendering: crispEdges;
+	}
+
+	.node text {
+		font-size: medium;
+		pointer-events: none;
+		/* text-shadow: 0 1px 0 #fff; */
+	}
+
+	.link {
+		fill: none;
+		stroke: #000;
+		stroke-opacity: .1;
+	}
+
+	.link:hover {
+		/* stroke: rgb(255, 0, 0); */
+		stroke-opacity: .3;
+	}
+
+	.chart {
+		/* background-color: aqua; */
+		/* border: 1px;
+		border: dashed red; */
+
+		padding-left: 5%;
+		padding-right: 5%;
+		text-align: center;
+	}
+
+	/* title {
+		color: blue;
+		font-size: 100px;
+
+	} */
+
+	.chart_title {
+		font-size: 30px;
+		color: blue;
+	}
+
+	.top_title {
+		font-size: 30px;
+	}
+</style>
+
+<body>
+
+	<div class="chart">
+		<p class="top_title">Data behind the Australian Climate Tech Community</p>
+	</div>
+
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js">	</script>
+	<script src="chart.js"></script>
+
+	</script>
+
+	<script>
+
+		show_sankey("Founding Team", "data/Founders.json");
+		show_sankey("Primary Offering", "data/Offering.json");
+		show_sankey("Funding Round", "data/Funding Round.json");
+		show_sankey("Funding Source", "data/Type2.json");
+		show_sankey("Funding Size", "data/Funding Split.json");
+		show_sankey("Where Founded", "data/Where Founded.json");
+		show_sankey("Business Model", "data/Business Model.json");
+		show_sankey("Product Stage", "data/Product Stage.json");
+		show_sankey("Annual Revenue", "data/Annual Revenue.json");
+		show_sankey("Percentage revenue overseas", "data/Percentage revenue overseas.json");
+		show_sankey("Primary impact goal", "data/Primary impact goal.json");
+		show_sankey("Business Challenges", "data/Challenges.json");
+		// show_sankey("Not a Business Challenge", "data/Challenges2.json");
+
+
+	</script>
+
+</body>
